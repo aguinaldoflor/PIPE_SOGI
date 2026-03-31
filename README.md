@@ -64,8 +64,6 @@ PIPESOGI_003_GER.ipynb: Notebook with data analysis  and the framework specific 
 
 PIPESOGI_004_TUR.ipynb: Notebook with data analysis specific to Turkey.
 
-PIPESOGI_005_Tests.ipynb: Notebook containing tests or validations for the performed analyses.
-
 requirements.txt: A file that lists all the Python libraries required to run the project.
 
 ## 📈 Results
