@@ -82,3 +82,7 @@ HYPERPARAMETERS_PIPE-SOGI.md: Documentation of the hyperparameter search spaces 
 
 In this section, you can add a summary of the main insights and conclusions obtained from your analyses. If there are important charts or visualizations, you can add screenshots or describe them here.
 Integrating traditional and advanced models within PIPE-SOGI enables a comprehensive forecast performance evaluation under varying market conditions. This modeling diversity ensures the framework remains adaptive and scalable for financial risk analysis in volatile industrial environments like the steel market.
+
+## 📄 Data Availability Statement
+
+All source code, tuned hyperparameters, and the derived model outputs (out-of-sample forecasts, residuals, and native quantiles for every model and market) are openly available at GitHub, and are sufficient to reproduce the entire risk layer, backtests, and all reported statistical tests. The underlying steel price series are commercial index data licensed from third-party providers and cannot be redistributed; acquisition details are documented in the repository so that the forecasting stage can be reproduced by holders of an equivalent license.
