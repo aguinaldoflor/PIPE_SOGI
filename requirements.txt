@@ -1,0 +1,57 @@
+# =====================================================================
+# PIPE-SOGI — Python dependencies
+# Python 3.12 (project developed and tested on 3.12.0, Windows 11)
+#
+# Install:   pip install -r requirements.txt
+#
+# NOTE ON GPU: install PyTorch FIRST, from the official index matching your
+# CUDA version, otherwise pip may pull the CPU-only build. Example (CUDA 12.1):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+# =====================================================================
+
+# --- core scientific stack -------------------------------------------
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3            # Ridge, GradientBoostingRegressor, RobustScaler
+
+# --- forecasting engine ----------------------------------------------
+darts>=0.32                  # TimeSeries, DL models, QuantileRegression
+                             # requires the darts.utils.likelihood_models.torch
+                             # module path and predict_likelihood_parameters
+torch>=2.0                   # see GPU note above
+pytorch-lightning>=2.0       # EarlyStopping callback used by darts models
+
+# --- hyperparameter optimization -------------------------------------
+optuna>=3.4                  # TPESampler, MedianPruner
+
+# --- risk layer (VaR/ES) ---------------------------------------------
+arch>=6.0                    # GJR-GARCH-t, EGARCH-skewt, SkewStudent, MCS
+
+# --- statistical testing ---------------------------------------------
+statsmodels>=0.14            # OLS (Engle-Ng), plot_acf, het_arch (ARCH-LM)
+scikit-posthocs>=0.8         # Nemenyi post-hoc (imported as scikit_posthocs)
+
+# --- plotting ---------------------------------------------------------
+matplotlib>=3.7
+seaborn>=0.12
+
+# --- I/O ---------------------------------------------------------------
+openpyxl>=3.1                # Excel engine for all result/checkpoint files
+
+# --- notebook environment ---------------------------------------------
+jupyter>=1.0
+ipykernel>=6.25
+
+# =====================================================================
+# REPRODUCIBILITY
+# The bounds above are minimum versions, not the exact ones used in the
+# reported experiments. To freeze the exact environment that produced the
+# published results, run inside the project's virtual environment:
+#
+#   pip freeze > requirements-lock.txt
+#
+# and ship requirements-lock.txt alongside this file. Confirm in particular
+# the installed `darts` version, whose module layout for likelihood models
+# changed across releases.
+# =====================================================================
